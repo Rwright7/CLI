@@ -7,14 +7,14 @@
 
 #define TITLE " ----(my terminal) ----"
 #define STARTER ">>"
-//#define MAX_STRING_SIZE 200
+
 
 /* main.c */
 
 // setup code, runs only once at the start of the program
 static void main_setup(int argc, char **argv)
 {
-	//(void)argv[argc-1];
+	
 	//clear screen 
 	system("clear");
 
@@ -52,12 +52,6 @@ static void main_loop(void)
 	}
 
 	cstr_drop(&input);
-		//check for exit command
-
-
-		//copy input into stack 
-	
-	
 
 }
 

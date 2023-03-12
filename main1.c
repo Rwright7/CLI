@@ -30,17 +30,17 @@ static void main_loop(void)
 
 	cstr_getline(&input, stdin);
 
-	if (cstr_eq_cstr(&input, "hello"))
+	if (cstr_eq(&input, "hello"))
 	{
 		printf("Hello, world!\n");
 	}
 
-	else if (cstr_eq_cstr(&input, "name"))
+	else if (cstr_eq(&input, "name"))
 	{
 		printf("My name is CLI Bot!\n");
 	}
 
-	else if (cstr_eq_cstr(&input, "exit"))
+	else if (cstr_eq(&input, "exit"))
 	{
 		printf("Goodbye!\n");
 		exit(0);

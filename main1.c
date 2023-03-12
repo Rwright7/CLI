@@ -59,8 +59,7 @@ static void main_loop(void)
 // You may not change `main()`
 int main(int argc, char **argv)
 {
-	    //(void)argv[argc-1];
-		// use `exit()` in `main_setup()` or `main_loop()` to exit early with a specific exit code.
+	// use `exit()` in `main_setup()` or `main_loop()` to exit early with a specific exit code.
 	main_setup(argc, argv);
 	while (true) { main_loop(); }
 	return 0;

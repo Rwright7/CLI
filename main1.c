@@ -2,8 +2,12 @@
 #include <stdlib.h>
 
 
-#include <stc/cstr.h>
+#define i_key char
+#define i_type variables
 #define i_val cstr
+#include <stc/cmap.h>
+#include <stc/cstr.h>
+
 
 #define TITLE " ----(my terminal) ----"
 #define STARTER ">>"
@@ -23,33 +27,13 @@ static void main_setup(int argc, char **argv)
 }
 
 // here goes your active constantly-running code, runs infinitely
+cmap variables = cmap_init();
 static void main_loop(void)
 {
 	cstr input = cstr_null;
 	printf("%s ", STARTER);
 
 	cstr_getline(&input, stdin);
-
-	if (cstr_equals(&input,"hello"))
-	{
-		printf("Hello, world!\n");
-	}
-
-	else if (cstr_equals(&input,  (const cstr*)"name"))
-	{
-		printf("My name is CLI Bot!\n");
-	}
-
-	else if (cstr_equals(&input,  (const cstr*)"exit"))
-	{
-		printf("Goodbye!\n");
-		exit(0);
-	}
-
-	else
-	{
-		printf("Unknown command: %s\n", cstr_data(&input));
-	}
 
 	cstr_drop(&input);
 

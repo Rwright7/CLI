@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <stc/cstr.h>
 
 #define i_key char
 #define i_type variables
 #define i_val cstr
 #include <stc/cmap.h>
-#include <stc/cstr.h>
+
 
 
 #define TITLE " ----(my terminal) ----"

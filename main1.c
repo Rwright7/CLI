@@ -1,26 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include <stc/cstr.h>
 
-#define i_key char
-#define i_type variables
+#define i_key cstr
 #define i_val cstr
+#define i_cmp(a,b) cstr_icmp((a), (b))
+#define i_hash(a) cstr_hash((a))
 #include <stc/cmap.h>
 
-
+cmap_cstr variables;
 
 #define TITLE " ----(my terminal) ----"
 #define STARTER ">>"
 
 
-/* main.c */
-
 // setup code, runs only once at the start of the program
 static void main_setup(int argc, char **argv)
 {
-	
-	//clear screen 
+	variables = cmap_cstr_init();
 	system("clear");
 
 	printf("%s\n", TITLE);
@@ -28,7 +25,6 @@ static void main_setup(int argc, char **argv)
 }
 
 // here goes your active constantly-running code, runs infinitely
-cmap variables = cmap_init();
 static void main_loop(void)
 {
 	cstr input = cstr_null;

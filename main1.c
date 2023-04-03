@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stc/cstr.h>
-
 #define i_key cstr
 #define i_val cstr
 #define i_cmp(a,b) cstr_icmp((a), (b))
 #define i_hash(a) cstr_hash((a))
 #include <stc/cmap.h>
+#include <splitfunction.h>
 
 cmap_cstr variables;
 
@@ -31,6 +31,8 @@ static void main_loop(void)
 	printf("%s ", STARTER);
 
 	cstr_getline(&input, stdin);
+	
+	void splitfunction(cstr *input);
 
 	cstr_drop(&input);
 

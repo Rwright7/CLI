@@ -1,6 +1,6 @@
- #include<stdio.h>
- #include<stc/cstr.h>
- #include<splitfunction.h>
+#include <stdio.h>
+#include <stc/cstr.h>
+#include <splitfunction.h>
 
 
 void splitfunction(cstr *input)

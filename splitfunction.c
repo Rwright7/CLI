@@ -5,7 +5,6 @@
 #include<splitfunction.h>
 
 
-//Create a external function in a next file to split the input into both left and right. 
 void splitfunction(cstr *input)
 {
 	//Find the position of the "=" character in the input string

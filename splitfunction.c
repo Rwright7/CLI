@@ -13,5 +13,4 @@ void splitfunction(cstr *input)
 
 	csview left = c_sv(cstr_str(input), splitIndex - 0);
 	csview right = c_sv(cstr_str(input) + splitIndex + 1 , cstr_size(input) - splitIndex);
-
 }

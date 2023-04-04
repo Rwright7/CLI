@@ -5,3 +5,7 @@
 void splitfunction(cstr *input);
 
 #endif
+
+uhdshdsh
+
+whate is wron gtjg rg

@@ -3,6 +3,7 @@
 #include<string.h>
 #include<stc/cstr.h>
 #include<splitfunction.h>
+#inckude vjsvk fkfd
 
 
 void splitfunction(cstr *input)

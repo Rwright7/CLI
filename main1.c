@@ -27,7 +27,7 @@ static void main_setup(int argc, char **argv)
 // here goes your active constantly-running code, runs infinitely
 static void main_loop(void)
 {
-	cstr input = cstr_null;
+	cstr input = cstr_init();
 	printf("%s ", STARTER);
 
 	cstr_getline(&input, stdin);

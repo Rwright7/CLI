@@ -32,7 +32,7 @@ static void main_loop(void)
 
 	cstr_getline(&input, stdin);
 	
-	void splitfunction(cstr *input);
+        splitfunction(&input);
 
 	cstr_drop(&input);
 

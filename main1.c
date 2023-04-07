@@ -32,7 +32,8 @@ static void main_loop(void)
 
 	cstr_getline(&input, stdin);
 	
-        splitfunction(&input);
+	csview left, right;
+        splitfunction(&input, &left, &right);
 
 	cstr_drop(&input);
 

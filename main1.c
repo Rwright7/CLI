@@ -34,6 +34,11 @@ static void main_loop(void)
 	
 	csview left, right;
         splitfunction(&input, &left, &right);
+	
+	cstr key = cstr_from_sv(left);
+	cstr value = cstr_from_sv(right);
+
+	cmap_cstr_insert(&variables, key, value);
 
 	cstr_drop(&input);
 

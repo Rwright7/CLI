@@ -39,6 +39,10 @@ static void main_loop(void)
 	cstr value = cstr_from_sv(right);
 
 	cmap_cstr_insert(&variables, key, value);
+	
+	cmap_cstr_get(&variables, input);
+	
+	printf("%s\n", cstr_str(&value));
 
 	cstr_drop(&input);
 

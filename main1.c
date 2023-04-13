@@ -21,7 +21,6 @@ static void main_setup(int argc, char **argv)
 	system("clear");
 
 	printf("%s\n", TITLE);
-	printf("%s", STARTER);
 }
 
 // here goes your active constantly-running code, runs infinitely

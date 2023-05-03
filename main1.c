@@ -32,16 +32,17 @@ static void main_loop(void)
 	cstr_getline(&input, stdin);
 	
 	csview left, right;
-        splitfunction(&input, &left, &right);
 	
-	cstr key = cstr_from_sv(left);
-	cstr value = cstr_from_sv(right);
+      if ( cstr_contains(&input, "=")){
 
-	cmap_cstr_insert(&variables, key, value);
-	
-	cmap_cstr_get(&variables, input);
-	
-	printf("%s\n", cstr_str(&value));
+		splitfunction(&input, &left, &right);
+		cstr key = cstr_from_sv(left);
+		cstr value = cstr_from_sv(right);
+		cmap_cstr_insert(&variables, key, value);
+
+	}else{
+		printf("%s", cstr_str(cmap_cstr_at(&variables, input)));
+	}
 
 	cstr_drop(&input);
 

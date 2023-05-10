@@ -11,7 +11,6 @@ bool validInput(const cstr *input){
 	//compile regular expression pattern
 	int result = cregex_compile(&regex, "[_$a-zA-Z][_$a-zA-Z0-9]*");
 
-	csview match[4];
 
 	//check if the first and every character is valid
 	

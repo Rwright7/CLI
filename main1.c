@@ -30,6 +30,7 @@ static void main_loop(void)
 	printf("%s ", STARTER);
 
 	cstr_getline(&input, stdin);
+	validInput(&input);
 	
 	csview left, right;
 	

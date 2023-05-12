@@ -3,8 +3,8 @@
 #include <stc/cregex.h>
 #include <validInput.h>
 
-bool validInput(const cstr *input){
-
+bool validInput(const cstr *input)
+{
 	//Initialize cregex object 
 	cregex regex = cregex_init();
 

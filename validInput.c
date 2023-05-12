@@ -13,11 +13,11 @@ bool validInput(const cstr *input){
 
 
 	//check if the first and every character is valid
-	
-	bool is_valid = cregex_is_match(&regex, cstr_str(input));
-
-	
+	if (cstr_starts_with(input, "1") || cstr_starts_with(input, "$")) {
+		fprintf(stderr, "Invalid variable name\n");
+	}else if (cregex_is_match(&regex, cstr_str(input))){
+		;
+	}
+	return 0;
 	cregex_drop(&regex);
-	return is_valid;
 }
-

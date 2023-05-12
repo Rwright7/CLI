@@ -18,6 +18,7 @@ bool validInput(const cstr *input)
 	}else if (cregex_is_match(&regex, cstr_str(input))){
 		;
 	}
-	return 0;
 	cregex_drop(&regex);
+	return 0;
+	
 }
